@@ -1,15 +1,15 @@
 language: node_js
 cache:
   directories:
+    - node_modules
     - ~/.npm
 node_js: '14'
 git:
   depth: 3
 script:
-  -yarn build
+  - yarn build
 deploy:
   provider: pages
-  edge: true
   skip-cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
